@@ -154,6 +154,8 @@ add_library(core STATIC
     hle/service/lm/lm.h
     hle/service/mm/mm_u.cpp
     hle/service/mm/mm_u.h
+    hle/service/ncm/ncm.cpp
+    hle/service/ncm/ncm.h
     hle/service/nifm/nifm.cpp
     hle/service/nifm/nifm.h
     hle/service/nifm/nifm_a.cpp
