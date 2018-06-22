@@ -128,6 +128,8 @@ add_library(core STATIC
     hle/service/bcat/module.h
     hle/service/bcat/bcat.cpp
     hle/service/bcat/bcat.h
+    hle/service/es/es.cpp
+    hle/service/es/es.h
     hle/service/fatal/fatal.cpp
     hle/service/fatal/fatal.h
     hle/service/fatal/fatal_p.cpp
