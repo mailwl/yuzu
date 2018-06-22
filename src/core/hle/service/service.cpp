@@ -29,6 +29,7 @@
 #include "core/hle/service/lbl/lbl.h"
 #include "core/hle/service/lm/lm.h"
 #include "core/hle/service/mm/mm_u.h"
+#include "core/hle/service/ncm/ncm.h"
 #include "core/hle/service/nfp/nfp.h"
 #include "core/hle/service/nifm/nifm.h"
 #include "core/hle/service/ns/ns.h"
@@ -198,6 +199,7 @@ void Init(std::shared_ptr<SM::ServiceManager>& sm) {
     LBL::InstallInterfaces(*sm);
     LM::InstallInterfaces(*sm);
     MM::InstallInterfaces(*sm);
+    NCM::InstallInterfaces(*sm);
     NFP::InstallInterfaces(*sm);
     NIFM::InstallInterfaces(*sm);
     NS::InstallInterfaces(*sm);
