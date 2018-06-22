@@ -48,6 +48,7 @@ namespace Log {
     SUB(Service, NVDRV)                                                                            \
     SUB(Service, PCTL)                                                                             \
     SUB(Service, PREPO)                                                                            \
+    SUB(Service, PSM)                                                                              \
     SUB(Service, SET)                                                                              \
     SUB(Service, SM)                                                                               \
     SUB(Service, SPL)                                                                              \

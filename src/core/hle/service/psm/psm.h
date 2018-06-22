@@ -4,13 +4,21 @@
 
 #pragma once
 
-#include "core/hle/service/psm/module.h"
+#include "core/hle/service/service.h"
 
 namespace Service::PSM {
 
-class PSM final : public Module::Interface {
+class PSM final : public ServiceFramework<PSM> {
 public:
-    explicit PSM(std::shared_ptr<Module> module);
+    explicit PSM();
+    ~PSM() = default;
+
+private:
+    void GetBatteryChargePercentage(Kernel::HLERequestContext& ctx);
+    void OpenSession(Kernel::HLERequestContext& ctx);
 };
+
+/// Registers all PSM services with the specified service manager.
+void InstallInterfaces(SM::ServiceManager& service_manager);
 
 } // namespace Service::PSM

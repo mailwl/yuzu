@@ -68,6 +68,7 @@ enum class Class : ClassType {
     Service_NVDRV,     ///< The NVDRV (Nvidia driver) service
     Service_PCTL,      ///< The PCTL (Parental control) service
     Service_PREPO,     ///< The PREPO (Play report) service
+    Service_PSM,       ///< The PSM service
     Service_SET,       ///< The SET (Settings) service
     Service_SM,        ///< The SM (Service manager) service
     Service_SPL,       ///< The SPL service
