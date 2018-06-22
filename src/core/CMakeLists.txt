@@ -170,6 +170,8 @@ add_library(core STATIC
     hle/service/nfp/nfp_user.h
     hle/service/ns/ns.cpp
     hle/service/ns/ns.h
+    hle/service/ns/ns_dev.cpp
+    hle/service/ns/ns_dev.h
     hle/service/ns/pl_u.cpp
     hle/service/ns/pl_u.h
     hle/service/nvdrv/devices/nvdevice.h
