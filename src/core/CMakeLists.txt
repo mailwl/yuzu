@@ -146,6 +146,8 @@ add_library(core STATIC
     hle/service/friend/friend_u.h
     hle/service/hid/hid.cpp
     hle/service/hid/hid.h
+    hle/service/lbl/lbl.cpp
+    hle/service/lbl/lbl.h
     hle/service/lm/lm.cpp
     hle/service/lm/lm.h
     hle/service/mm/mm_u.cpp

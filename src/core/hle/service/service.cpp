@@ -25,6 +25,7 @@
 #include "core/hle/service/filesystem/filesystem.h"
 #include "core/hle/service/friend/friend.h"
 #include "core/hle/service/hid/hid.h"
+#include "core/hle/service/lbl/lbl.h"
 #include "core/hle/service/lm/lm.h"
 #include "core/hle/service/mm/mm_u.h"
 #include "core/hle/service/nfp/nfp.h"
@@ -192,6 +193,7 @@ void Init(std::shared_ptr<SM::ServiceManager>& sm) {
     FileSystem::InstallInterfaces(*sm);
     Friend::InstallInterfaces(*sm);
     HID::InstallInterfaces(*sm);
+    LBL::InstallInterfaces(*sm);
     LM::InstallInterfaces(*sm);
     MM::InstallInterfaces(*sm);
     NFP::InstallInterfaces(*sm);
