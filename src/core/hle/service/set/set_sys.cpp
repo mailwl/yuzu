@@ -10,12 +10,22 @@
 namespace Service::Set {
 
 void SET_SYS::GetColorSetId(Kernel::HLERequestContext& ctx) {
-
     IPC::ResponseBuilder rb{ctx, 3};
-
     rb.Push(RESULT_SUCCESS);
     rb.Push<u32>(0);
+    NGLOG_WARNING(Service_SET, "(STUBBED) called");
+}
 
+void SET_SYS::GetEulaVersions(Kernel::HLERequestContext& ctx) {
+    IPC::ResponseBuilder rb{ctx, 3};
+    rb.Push(RESULT_SUCCESS);
+    rb.Push<u32>(0);
+    NGLOG_WARNING(Service_SET, "(STUBBED) called");
+}
+
+void SET_SYS::SetEulaVersions(Kernel::HLERequestContext& ctx) {
+    IPC::ResponseBuilder rb{ctx, 2};
+    rb.Push(RESULT_SUCCESS);
     NGLOG_WARNING(Service_SET, "(STUBBED) called");
 }
 
@@ -41,8 +51,8 @@ SET_SYS::SET_SYS() : ServiceFramework("set:sys") {
         {18, nullptr, "SetAccountSettings"},
         {19, nullptr, "GetAudioVolume"},
         {20, nullptr, "SetAudioVolume"},
-        {21, nullptr, "GetEulaVersions"},
-        {22, nullptr, "SetEulaVersions"},
+        {21, &SET_SYS::GetEulaVersions, "GetEulaVersions"},
+        {22, &SET_SYS::SetEulaVersions, "SetEulaVersions"},
         {23, &SET_SYS::GetColorSetId, "GetColorSetId"},
         {24, nullptr, "SetColorSetId"},
         {25, nullptr, "GetConsoleInformationUploadFlag"},

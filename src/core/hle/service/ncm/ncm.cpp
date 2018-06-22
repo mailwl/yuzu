@@ -24,7 +24,7 @@ void PSM::OpenSession(Kernel::HLERequestContext& ctx) {
 }
 */
 
-NCM::NCM() : ServiceFramework("lbl") {
+NCM::NCM() : ServiceFramework("ncm") {
     static const FunctionInfo functions[] = {
         {6, nullptr, "TurnOnBacklight"},
         {7, nullptr, "TurnOffBacklight"},

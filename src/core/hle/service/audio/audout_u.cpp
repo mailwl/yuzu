@@ -31,8 +31,8 @@ public:
             {4, &IAudioOut::RegisterBufferEvent, "RegisterBufferEvent"},
             {5, &IAudioOut::GetReleasedAudioOutBuffer, "GetReleasedAudioOutBuffer"},
             {6, nullptr, "ContainsAudioOutBuffer"},
-            {7, nullptr, "AppendAudioOutBufferAuto"},
-            {8, nullptr, "GetReleasedAudioOutBufferAuto"},
+            {7, &IAudioOut::AppendAudioOutBuffer, "AppendAudioOutBufferAuto"},
+            {8, &IAudioOut::GetReleasedAudioOutBuffer, "GetReleasedAudioOutBufferAuto"},
             {9, nullptr, "GetAudioOutBufferCount"},
             {10, nullptr, "GetAudioOutPlayedSampleCount"},
             {11, nullptr, "FlushAudioOutBuffers"},
@@ -198,8 +198,8 @@ void AudOutU::OpenAudioOut(Kernel::HLERequestContext& ctx) {
 AudOutU::AudOutU() : ServiceFramework("audout:u") {
     static const FunctionInfo functions[] = {{0, &AudOutU::ListAudioOuts, "ListAudioOuts"},
                                              {1, &AudOutU::OpenAudioOut, "OpenAudioOut"},
-                                             {2, nullptr, "ListAudioOutsAuto"},
-                                             {3, nullptr, "OpenAudioOutAuto"}};
+                                             {2, &AudOutU::ListAudioOuts, "ListAudioOutsAuto"},
+                                             {3, &AudOutU::OpenAudioOut, "OpenAudioOutAuto"}};
     RegisterHandlers(functions);
 }
 

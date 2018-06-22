@@ -40,13 +40,21 @@ void SET::GetAvailableLanguageCodes(Kernel::HLERequestContext& ctx) {
     NGLOG_DEBUG(Service_SET, "called");
 }
 
+void SET::GetRegionCode(Kernel::HLERequestContext& ctx) {
+    IPC::ResponseBuilder rb{ctx, 3};
+    rb.Push(RESULT_SUCCESS);
+    rb.Push<u32>(1);
+
+    NGLOG_WARNING(Service_SET, "called");
+}
+
 SET::SET() : ServiceFramework("set") {
     static const FunctionInfo functions[] = {
         {0, nullptr, "GetLanguageCode"},
         {1, &SET::GetAvailableLanguageCodes, "GetAvailableLanguageCodes"},
         {2, nullptr, "MakeLanguageCode"},
         {3, nullptr, "GetAvailableLanguageCodeCount"},
-        {4, nullptr, "GetRegionCode"},
+        {4, &SET::GetRegionCode, "GetRegionCode"},
         {5, &SET::GetAvailableLanguageCodes, "GetAvailableLanguageCodes2"},
         {6, nullptr, "GetAvailableLanguageCodeCount2"},
         {7, nullptr, "GetKeyCodeMap"},

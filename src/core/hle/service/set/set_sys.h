@@ -15,6 +15,8 @@ public:
 
 private:
     void GetColorSetId(Kernel::HLERequestContext& ctx);
+    void GetEulaVersions(Kernel::HLERequestContext& ctx);
+    void SetEulaVersions(Kernel::HLERequestContext& ctx);
 };
 
 } // namespace Service::Set

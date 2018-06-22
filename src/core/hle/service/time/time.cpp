@@ -10,6 +10,7 @@
 #include "core/hle/kernel/client_port.h"
 #include "core/hle/kernel/client_session.h"
 #include "core/hle/service/time/time.h"
+#include "core/hle/service/time/time_a.h"
 #include "core/hle/service/time/time_s.h"
 #include "core/hle/service/time/time_u.h"
 
@@ -212,6 +213,7 @@ Module::Interface::Interface(std::shared_ptr<Module> time, const char* name)
 
 void InstallInterfaces(SM::ServiceManager& service_manager) {
     auto time = std::make_shared<Module>();
+    std::make_shared<TIME_A>(time)->InstallAsService(service_manager);
     std::make_shared<TIME_S>(time)->InstallAsService(service_manager);
     std::make_shared<TIME_U>(time)->InstallAsService(service_manager);
 }

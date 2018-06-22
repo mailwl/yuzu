@@ -47,7 +47,7 @@ void DebugContext::DoOnEvent(Event event, void* data) {
 
 void DebugContext::Resume() {
     {
-        std::lock_guard<std::mutex> lock(breakpoint_mutex);
+        // std::lock_guard<std::mutex> lock(breakpoint_mutex);
 
         // Tell all observers that we are about to resume
         for (auto& breakpoint_observer : breakpoint_observers) {
